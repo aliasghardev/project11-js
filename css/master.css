@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: mooly;
+    src: url("../font/Mooli-Regular.ttf") format("opentype");
+}
+
+@keyframes h21{
+    0%,20%{transform: translatex(300px);opacity: 0;}
+    40%,100%{
+        transform: translatex(0);opacity: 1;
+    }
+}
+@keyframes span1{
+    0%,40%{transform: translateY(200px);opacity: 0;}
+    60%,100%{
+        transform: translateY(0) rotatex(360deg);opacity: 1;
+    }
+}

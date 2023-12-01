@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+    <main class="w-full h-screen overflow-y-scroll font-primary bg-white">
+        <!-- header -->
+        <header class="w-full h-16 z-50 relative bg-white">
+            <nav class="w-full h-full hidden md:block ">
+                <ul class="w-2/3 h-full flex justify-center items-center cursor-pointer">
+                    <li onclick="nav1()"  class=" relative w-[20%]  justify-evenly h-full items-center flex text-sm tran capitalize bg-blue-500 hover:bg-black  hover:text-blue-500 "><i class="bi bi-list"></i> all departments <i class="bi bi-caret-down"></i>
+                        <ul id="mynav1" class="absolute hidden bg-white left-0 text-lg top-16 w-full flex-wrap justify-center items-center ">
+                            <li class="w-full py-2 border hover:text-blue-500 text-black flex justify-between font-bold h-12 p-2"><img src="img/1.png" alt=""> headphone <i class="bi bi-caret-right"></i></li>
+                            <li class="w-full py-2 border hover:text-blue-500 text-black flex justify-between font-bold h-12 p-2"><img src="img/2.png" alt=""> mobile tablets <i class="bi bi-caret-right"></i></li>
+                            <li class="w-full py-2 border hover:text-blue-500 text-black flex justify-between font-bold h-12 p-2"><img src="img/3.png" alt=""> cpu heat pipes <i class="bi bi-caret-right"></i></li>
+                            <li class="w-full py-2 border hover:text-blue-500 text-black flex justify-between font-bold h-12 p-2"><img src="img/4.png" alt=""> smart watch <i class="bi bi-caret-right"></i></li>
+                            <li class="w-full py-2 border hover:text-blue-500 text-black flex justify-between font-bold h-12 p-2"><img src="img/5.png" alt=""> bluetooth <i class="bi bi-caret-right"></i></li>
+                        </ul>
+                    </li>
+                    <li class="w-[10%] h-full items-center flex justify-center text-sm capitalize hover:text-blue-500">home <i class="bi bi-caret-down"></i></li>
+                    <li class="w-[10%] h-full items-center flex justify-center text-sm capitalize hover:text-blue-500">shop <i class="bi bi-caret-down"></i></li>
+                    <li class="w-[10%] h-full items-center flex justify-center text-sm capitalize hover:text-blue-500">products <i class="bi bi-caret-down"></i></li>
+                    <li class="w-[10%] h-full items-center flex justify-center text-sm capitalize hover:text-blue-500">blog <i class="bi bi-caret-down"></i></li>
+                    <li class="w-[10%] h-full items-center flex justify-center text-sm capitalize hover:text-blue-500">coupons <i class="bi bi-caret-down"></i></li>
+                    <li class="w-[10%] h-full items-center flex justify-center text-sm capitalize hover:text-blue-500">contact <i class="bi bi-caret-down"></i></li>
+                </ul>
+            </nav>
+
+            <div class="w-full flex lg:hidden bg-slate-500">
+                <button onclick="nav2()" class="flex lg:hidden  w-full justify-end items-center cursor-pointer relative"><i class="text-3xl mr-5 text-black transition-all tran hover:rotate-90 bi bi-list p-3"></i></button>
+                <ul class="w-full mt-14 flex-wrap text-xl capitalize bg-white text-black hidden absolute menu">
+                    <li onclick="nav3()"  class=" relative w-full  justify-evenly h-full items-center  cursor-pointer tran capitalize  hover:bg-black  hover:text-blue-500 ">all departments 
+                        <ul id="mynav2" class="absolute hidden left-0 text-lg top-8 w-full bg-white flex-wrap justify-center items-center ">
+                            <li class="w-full py-2 border hover:text-blue-500 text-black flex justify-between font-bold h-12 p-2"><img src="img/1.png" alt=""> headphone <i class="bi bi-caret-right"></i></li>
+                            <li class="w-full py-2 border hover:text-blue-500 text-black flex justify-between font-bold h-12 p-2"><img src="img/2.png" alt=""> mobile tablets <i class="bi bi-caret-right"></i></li>
+                            <li class="w-full py-2 border hover:text-blue-500 text-black flex justify-between font-bold h-12 p-2"><img src="img/3.png" alt=""> cpu heat pipes <i class="bi bi-caret-right"></i></li>
+                            <li class="w-full py-2 border hover:text-blue-500 text-black flex justify-between font-bold h-12 p-2"><img src="img/4.png" alt=""> smart watch <i class="bi bi-caret-right"></i></li>
+                            <li class="w-full py-2 border hover:text-blue-500 text-black flex justify-between font-bold h-12 p-2"><img src="img/5.png" alt=""> bluetooth <i class="bi bi-caret-right"></i></li>
+                        </ul>
+                    </li>
+                    <li class="w-full flex justify-start py-3 hover:text-blue-500 transition"><a href="">home</a></li>
+                    <li class="w-full flex justify-start py-3 hover:text-blue-500 transition"><a href="">shop</a></li>
+                    <li class="w-full flex justify-start py-3 hover:text-blue-500 transition"><a href="">products</a></li>
+                    <li class="w-full flex justify-start py-3 hover:text-blue-500 transition"><a href="">blog</a></li>
+                    <li class="w-full flex justify-start py-3 hover:text-blue-500 transition"><a href="">coupons</a></li>
+                    <li class="w-full flex justify-start py-3 hover:text-blue-500 transition"><a href="">contact</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- section 1 -->
+        <section class="w-full h-screen overflow-hidden ">
+            <div  class="w-full h-full flex flex-wrap justify-evenly  items-center  bg-[#115061]">
+                <span onclick="sec1()" class="w-1/12 text-3xl  hidden lg:block cursor-pointer bg11"><i class="bi bi-chevron-left"></i></span>
+                <div class="lg:w-6/12 w-full capitalize ">
+                    <span class="text-white font-bold text-xl">starting at $starting</span>
+                    <h2 id="anime1" class="my-3 md:text-6xl text-xl font-bold  w-5/6 text-white">the best note book collection 2023</h2>
+                    <p id="anime2"  class="md:w-2/3 w-full mb-10 text-xl text-white ">exclusive offer<span class="text-yellow-600">-10%</span> off this week</p>
+                    <span id="anime3" class="p-3 mt-5 bg-white cursor-pointer text-black md:text-xl border rounded-lg transition-all hover:text-white hover:bg-[#115061]">shop now <i class="bi bi-arrow-right"></i></span>
+                </div>
+                <div id="bgsec1" class="w-4/12 hidden lg:block bg-[url('../img/sec3.png')]  h-[460px] bg-cover bg-center"></div>
+                <span onclick="sec1()" class="w-1/12  hidden lg:block text-3xl text-end  cursor-pointer"><i class="bi bi-chevron-right"></i></span>
+            </div>
+        </section>
+
+        <!-- section 2 -->
+        <section class="w-full overflow-hidden">
+            <div class="w-full capitalize flex justify-between items-center p-5">
+                <h3 class="text-4xl lg:w-1/4">trending products</h3>
+                <ul class="flex lg:w-1/4 justify-evenly">
+                    <li>new</li>
+                    <li>featured</li>
+                    <li>topsellers</li>
+                </ul>
+            </div>
+
+            <div class="w-full gap-6 my-5 flex flex-wrap justify-center">
+
+                <figure class="lg:w-1/5 w-11/12  rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/6.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">bluetooth</span>
+                        <h6 class="font-bold capitalize">lenovo sport bluetooth</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p><del class="text-xs">$70</del><span class=" text-blue-600 font-bold">$66.50</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/5 w-11/12  rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/7.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">bluetooth</span>
+                        <h6 class="font-bold capitalize">lenovo wireless bluetooth</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p><del class="text-xs">$70</del><span class=" text-blue-600 font-bold">$66.50</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/5 w-11/12  rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/8.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">bluetooth</span>
+                        <h6 class="font-bold capitalize">sony lady fitness watch</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p><del class="text-xs">$70</del><span class=" text-blue-600 font-bold">$66.50</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/5 w-11/12  rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/9.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">bluetooth</span>
+                        <h6 class="font-bold capitalize">sony smart watch</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p><del class="text-xs">$70</del><span class=" text-blue-600 font-bold">$66.50</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/5 w-11/12  rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/10.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">bluetooth</span>
+                        <h6 class="font-bold capitalize">apple watch sport band</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p><del class="text-xs">$70</del><span class=" text-blue-600 font-bold">$66.50</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/5 w-11/12  rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/11.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">bluetooth</span>
+                        <h6 class="font-bold capitalize">antec air cooler</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p><del class="text-xs">$70</del><span class=" text-blue-600 font-bold">$66.50</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/5 w-11/12  rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/12.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">bluetooth</span>
+                        <h6 class="font-bold capitalize">gaming headphone</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p><del class="text-xs">$70</del><span class=" text-blue-600 font-bold">$66.50</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/5 w-11/12  rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/13.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">bluetooth</span>
+                        <h6 class="font-bold">iPhone 14 Pro</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p><del class="text-xs">$70</del><span class=" text-blue-600 font-bold">$66.50</span></p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        
+        <!-- section 3 -->
+        <section class="w-full  flex pt-20">
+
+            
+            <div class="lg:w-3/4 w-full p-5 flex justify-evenly flex-wrap ">
+                <figure class="lg:w-1/4 w-11/12 m-4 rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/15.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">headphones</span>
+                        <h6 class="font-bold py-4 capitalize">headphones wireless.</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p class="py-3"><del class="text-xs ">$120</del><span class=" text-blue-600 font-bold">$103.20</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/4 w-11/12 m-4 rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/12.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">headphones</span>
+                        <h6 class="font-bold py-4 capitalize">gaming headphone</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p class="py-3"><del class="text-xs ">$130</del><span class=" text-blue-600 font-bold">$123.50</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/4 w-11/12 m-4 rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/14.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">headphones</span>
+                        <h6 class="font-bold py-4 capitalize">headphone with mic</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p class="py-3"><del class="text-xs "></del><span class=" text-blue-600 font-bold">$110</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/4 w-11/12 m-4 rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/17.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">headphones</span>
+                        <h6 class="font-bold py-4 capitalize">galaxy android tablet</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p class="py-3"><del class="text-xs ">$320</del><span class=" text-blue-600 font-bold">$288</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/4 w-11/12 m-4 rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/13.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">headphones</span>
+                        <h6 class="font-bold py-4 ">iPhone 14 Pro</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p class="py-3"><del class="text-xs ">$1199</del><span class=" text-blue-600 font-bold">$1019.15</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="lg:w-1/4 w-11/12 m-4 rounded-lg border-2">
+                    <img class="transition-all hover:scale-110" src="img/16.png" alt="">
+                    <figcaption>
+                        <span class="capitalize my-2 text-slate-700">headphones</span>
+                        <h6 class="font-bold py-4 ">Apple iPad Air</h6>
+                        <span class="text-yellow-600 my-2 capitalize"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> (2 review)</span>
+                        <p class="py-3"><del class="text-xs ">$999</del><span class=" text-blue-600 font-bold">$949.05</span></p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div id="women" class="w-1/4 hidden lg:block right-4 top-16  bg-white">
+                <div class="w-full flex border-2 p-2 border-red-600 rounded-lg">
+                    <div class="w-1/2">
+                        <h6 class="capitalize font-bold text-2xl">electronics gadgets</h6>
+                        <ul class="capitalize py-3">
+                            <li>headphone</li>
+                            <li>mobile tablets</li>
+                            <li>cpu heat pipes</li>
+                            <li>smart watch</li>
+                            <li>bluetooth</li>
+                        </ul>
+                        <span class="cursor-pointer hover:text-blue-500 py-3">more product <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                    <img class="w-8/12" src="img/23.png" alt="">
+                </div>
+                <div class="w-full p-3 rounded-lg bg-[url('../img/24.jpg')] text-white bg-cover bg-center mt-2" >
+                    <span>only $99.00</span>
+                    <p class="capitalize text-2xl w-2/3 font-bold py-3">selected novelty products</p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- section 4 -->
+        <section class="w-full flex justify-evenly py-10 flex-wrap bg-white">
+            <figure class="md:w-1/6 w-1/2 transition-all relative">
+                <img src="img/18.jpg" alt="" class="w-full rounded-lg">
+                <h4 class="absolute transition-all text-5xl top-0 rounded-lg left-0 text-white bg-black/50 flex justify-center items-center w-full h-full opacity-0 hover:opacity-100"><i class="bi bi-instagram"></i></h4>
+            </figure>
+            <figure class="md:w-1/6 w-1/2 transition-all relative">
+                <img src="img/19.jpg" alt="" class="w-full rounded-lg">
+                <h4 class="absolute transition-all text-5xl top-0 rounded-lg left-0 text-white bg-black/50 flex justify-center items-center w-full h-full opacity-0 hover:opacity-100"><i class="bi bi-instagram"></i></h4>
+            </figure>
+            <figure class="md:w-1/6 w-1/2 transition-all relative">
+                <img src="img/20.jpg" alt="" class="w-full rounded-lg">
+                <h4 class="absolute transition-all text-5xl top-0 rounded-lg left-0 text-white bg-black/50 flex justify-center items-center w-full h-full opacity-0 hover:opacity-100"><i class="bi bi-instagram"></i></h4>
+            </figure>
+            <figure class="md:w-1/6 w-1/2 transition-all relative">
+                <img src="img/21.jpg" alt="" class="w-full rounded-lg">
+                <h4 class="absolute transition-all text-5xl top-0 rounded-lg left-0 text-white bg-black/50 flex justify-center items-center w-full h-full opacity-0 hover:opacity-100"><i class="bi bi-instagram"></i></h4>
+            </figure>
+            <figure class="md:w-1/6 w-1/2 transition-all relative">
+                <img src="img/22.jpg" alt="" class="w-full rounded-lg">
+                <h4 class="absolute transition-all text-5xl top-0 rounded-lg left-0 text-white bg-black/50 flex justify-center items-center w-full h-full opacity-0 hover:opacity-100"><i class="bi bi-instagram"></i></h4>
+            </figure>
+        </section>
+
+        <!-- footer -->
+        <section class="w-full bg-gray-500 py-20 text-white flex flex-wrap">
+            <div class="md:w-1/4 w-full p-5 ">
+                <h3 class="text-2xl capitalize mt-5 font-bold">developer
+                    <ul>
+                        <li class="text-black text-xl capitalize my-5">aliasghar gholami</li>
+                        <li class="text-black text-xl">phone:09306511606</li>
+                        <li class=" flex w-full  py-5 ">
+                            <a class="text-3xl m-3 p-2 rounded-full bg-slate-600 hover:bg-blue-600 transition-all"  href="https://www.linkedin.com/in/aliasghar-gholami-a1229a290"><i class="bi bi-linkedin"></i></a>
+                            <a  class="text-3xl m-3 p-2 rounded-full bg-slate-600 hover:bg-blue-600 transition-all" href="https://github.com/aliasghardev"><i class="bi bi-github"></i></a>
+                            <a class="text-3xl m-3 p-2 rounded-full bg-slate-600 hover:bg-blue-600 transition-all"  href="https://www.instagram.com/aliasghar.gholami_dev"><i class="bi bi-instagram"></i></a>
+                        </li>
+                    </ul>
+                </h3>
+                
+            </div>
+            <div class="md:w-1/4 w-full p-5 ">
+                <h3 class="text-2xl capitalize mt-5 font-bold">information
+                    <ul>
+                        <li class="text-xl my-2 text-black ">about us</li>
+                        <li class="text-xl my-2 text-black">checkout</li>
+                        <li class="text-xl my-2 text-black">contact</li>
+                        <li class="text-xl my-2 text-black">servius</li>
+                    </ul>
+                </h3>
+                
+            </div>
+            <div class="md:w-1/4 w-full p-5 ">
+                <h3 class="text-2xl capitalize mt-5 font-bold">my account
+                    <ul>
+                        <li class="text-xl my-2 text-black">my account</li>
+                        <li class="text-xl my-2 text-black">contact</li>
+                        <li class="text-xl my-2 text-black">shopping Cart</li>
+                        <li class="text-xl my-2 text-black">shop</li>
+                    </ul>
+                </h3>
+                
+            </div>
+            <div class="md:w-1/4 w-full p-5 ">
+                <h3 class="text-2xl capitalize mt-5 font-bold">join our newsletter now
+                    <ul>
+                        <li class="text-xl text-black capitalize my-5">Get E-mail updates about our latest shop and special offers.</li>
+                        <li class="text-xl flex h-10">
+                            <div class="w-3/4 text-black"><input class="w-full h-full" type="text" placeholder="enter your E-mail"></div>
+                            <div class="w-fit  bg-blue-600 flex items-center cursor-pointer"><p>subscrib</p></div>
+                        </li>
+                        
+                    </ul>
+                </h3>
+                
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+
+        // scroll.........
+
+        document.getElementsByTagName('main')[0].addEventListener('scroll', (e)=>{
+            let temp = e.target.scrollTop
+            if(temp > 300){
+                document.querySelector('header').classList.add('fixed')
+                document.querySelector('header').classList.remove('relative')
+            }else{
+                document.querySelector('header').classList.remove('fixed')
+                document.querySelector('header').classList.add('relative')
+            }
+
+            if(temp>1786 && temp<2300){
+                document.getElementById('women').classList.add('fixed')
+            }else{
+                document.getElementById('women').classList.remove('fixed')
+            }
+        })
+
+        // header
+        function nav2(){
+            let _menu=document.getElementsByClassName('menu')[0]
+            _menu.classList.toggle('flex')
+            _menu.classList.toggle('hidden')
+        }
+        function nav1(){
+            let _nav1=document.getElementById('mynav1')
+            _nav1.classList.toggle('flex')
+            _nav1.classList.toggle('hidden')
+        }
+        function nav3(){
+            let _nav2=document.getElementById('mynav2')
+            _nav2.classList.toggle('flex')
+            _nav2.classList.toggle('hidden')
+        }
+
+        // section1
+        function sec1(){
+            document.getElementById('bgsec1').classList.toggle("bg-[url('../img/sec3.png')]")
+            document.getElementById('bgsec1').classList.toggle("bg-[url('../img/sec2.png')]")
+            document.getElementById('anime1').classList.add("animate-sec1h2")
+            document.getElementById('anime2').classList.add("animate-sec1span1")
+            document.getElementById('anime3').classList.add("animate-sec1span1")
+            setTimeout(() => {
+                document.getElementById('anime1').classList.remove("animate-sec1h2")
+                document.getElementById('anime2').classList.remove("animate-sec1span1")
+                document.getElementById('anime3').classList.remove("animate-sec1span1")
+            }, 1500);
+        }
+
+    </script>
+</body>
+</html>
